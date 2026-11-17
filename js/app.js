@@ -22,15 +22,36 @@
     });
   }
 
-  // 2. Transição automática em Fade dos vídeos de fundo (.mp4)
+  // 2. Transição otimizada com Play/Pause real (apenas 1 vídeo decodificando por vez)
   const bgVideos = document.querySelectorAll(".bg-video");
-  if (bgVideos.length > 1) {
-    let currentVideoIdx = 0;
-    setInterval(() => {
-      bgVideos[currentVideoIdx].classList.remove("active");
-      currentVideoIdx = (currentVideoIdx + 1) % bgVideos.length;
-      bgVideos[currentVideoIdx].classList.add("active");
-    }, 7000);
+  if (bgVideos.length > 0) {
+    bgVideos.forEach((video, idx) => {
+      if (idx === 0) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+
+    if (bgVideos.length > 1) {
+      let currentVideoIdx = 0;
+      setInterval(() => {
+        const currentVideo = bgVideos[currentVideoIdx];
+        const nextIdx = (currentVideoIdx + 1) % bgVideos.length;
+        const nextVideo = bgVideos[nextIdx];
+
+        nextVideo.currentTime = 0;
+        nextVideo.play().catch(() => {});
+        nextVideo.classList.add("active");
+        currentVideo.classList.remove("active");
+
+        setTimeout(() => {
+          currentVideo.pause();
+        }, 1600);
+
+        currentVideoIdx = nextIdx;
+      }, 7000);
+    }
   }
 
   // 3. Controle de carregamento das imagens

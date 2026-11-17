@@ -213,7 +213,7 @@ button, input, select {
   border-bottom: 1px solid var(--surface-muted);
 }
 
-/* HERO COM VÍDEOS DE FUNDO EM LOOP E FADE */
+/* HERO COM VÍDEOS OTIMIZADOS E ACELERAÇÃO DE HARDWARE */
 .hero-video-section {
   position: relative;
   min-height: 88vh;
@@ -235,7 +235,7 @@ button, input, select {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateZ(0);
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -243,6 +243,7 @@ button, input, select {
   object-fit: cover;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
+  will-change: opacity;
 }
 
 .bg-video.active {
@@ -286,9 +287,8 @@ button, input, select {
 }
 
 .hero-brand-card {
-  background: rgba(5, 10, 48, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
+  background: rgba(5, 10, 48, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-lg);
   padding: 40px 30px;
   display: flex;
@@ -298,7 +298,7 @@ button, input, select {
   gap: 28px;
   width: 100%;
   max-width: 440px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
 .hero-showcase-logo {
@@ -396,9 +396,8 @@ button, input, select {
   grid-template-columns: 1fr auto 1fr auto 1fr;
   align-items: center;
   gap: 16px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(12, 22, 84, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
   border-radius: var(--radius-md);
   padding: 20px 24px;
 }
@@ -426,7 +425,7 @@ button, input, select {
 }
 
 /* ==========================================================================
-   BARRA DE LOGOS TIER 1 (SAJ NA REFERÊNCIA, DEMAIS PROPORCIONAIS E HUAWEI BRANCA)
+   BARRA DE LOGOS TIER 1
    ========================================================================== */
 .tech-brands-strip {
   position: relative;

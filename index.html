@@ -71,16 +71,16 @@
   </header>
 
   <main>
-    <!-- HERO COM VÍDEOS DE FUNDO EM LOOP E FADE -->
+    <!-- HERO COM VÍDEOS GERENCIADOS SOB DEMANDA (SEM TRAVAMENTOS) -->
     <section id="hero" class="hero-video-section">
       <div class="hero-video-bg">
-        <video class="bg-video active" autoplay muted loop playsinline>
+        <video class="bg-video active" autoplay muted loop playsinline preload="auto">
           <source src="img/gravacao1.mp4" type="video/mp4" />
         </video>
-        <video class="bg-video" autoplay muted loop playsinline>
+        <video class="bg-video" muted loop playsinline preload="metadata">
           <source src="img/gravacao2.mp4" type="video/mp4" />
         </video>
-        <video class="bg-video" autoplay muted loop playsinline>
+        <video class="bg-video" muted loop playsinline preload="metadata">
           <source src="img/gravacao3.mp4" type="video/mp4" />
         </video>
         <div class="hero-video-overlay"></div>
@@ -174,7 +174,7 @@
         <article class="featured-project-card">
           <div class="featured-img-wrap">
             <img src="img/paroquia.jpg" alt="Paróquia Santa Ana - Sistema com Inversores e Baterias" class="service-photo" />
-            <span class="project-tag-absolute">Destaque • Paróquia Santa Ana</span>
+            <span class="project-tag-absolute">Híbrido • Paróquia Santa Ana</span>
           </div>
           <div class="featured-info">
             <div class="eyebrow-pill">
@@ -213,7 +213,7 @@
           <article class="project-card">
             <div class="project-img-wrap">
               <img src="img/barreirinhas.jpg" alt="Centro, Barreirinhas" class="service-photo" />
-              <span class="project-badge">Centro • Barreirinhas</span>
+              <span class="project-badge">Comercial • Barreirinhas</span>
             </div>
             <div class="project-content">
               <h3>Centro, Barreirinhas</h3>
