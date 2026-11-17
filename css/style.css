@@ -424,68 +424,6 @@ button, input, select {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* ==========================================================================
-   BARRA DE LOGOS TIER 1
-   ========================================================================== */
-.tech-brands-strip {
-  position: relative;
-  z-index: 10;
-  background-color: var(--navy-mid);
-  border-bottom: 1px solid var(--border-dark);
-  padding: 36px 0;
-  text-align: center;
-  color: var(--white);
-  width: 100%;
-}
-
-.brands-label {
-  display: block;
-  font-size: 0.84rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #94a3b8;
-  margin-bottom: 20px;
-}
-
-.brands-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.brand-logo-box {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 16px 28px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 180px;
-  height: 80px;
-  transition: border-color var(--transition), background-color var(--transition), transform var(--transition);
-}
-
-.brand-logo-box:hover {
-  background: rgba(255, 255, 255, 0.09);
-  border-color: rgba(248, 210, 16, 0.5);
-  transform: translateY(-2px);
-}
-
-.brand-logo-img {
-  max-height: 52px;
-  width: auto;
-  object-fit: contain;
-  opacity: 1;
-}
-
-.brand-logo-img[alt="Huawei"] {
-  filter: brightness(0) invert(1);
-}
-
 /* SEÇÕES COMUNS */
 .section { padding: 76px 0; position: relative; z-index: 5; background-color: var(--white); }
 .section-light { background-color: var(--surface-light); border-bottom: 1px solid var(--border-light); }
@@ -495,6 +433,20 @@ button, input, select {
   text-align: center;
   max-width: 680px;
   margin: 0 auto 48px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--navy-soft);
+  margin-bottom: 8px;
+}
+
+.eyebrow-yellow {
+  color: var(--yellow);
 }
 
 .section-header h2 {
@@ -581,6 +533,9 @@ button, input, select {
 }
 
 .featured-info .eyebrow-pill .eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
   background-color: var(--navy);
 }
 
@@ -752,6 +707,16 @@ button, input, select {
   box-shadow: var(--shadow-md);
 }
 
+.service-card .service-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
 .service-bg-1 { background: linear-gradient(135deg, #142278 0%, #050a30 100%); }
 .service-bg-2 { background: linear-gradient(135deg, #0c1654 0%, #030621 100%); }
 .service-bg-3 { background: linear-gradient(135deg, #1a2d8f 0%, #050a30 100%); }
@@ -901,6 +866,77 @@ button, input, select {
 .faq-item[open] .faq-toggle { transform: rotate(45deg); }
 .faq-item p { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border-light); font-size: 0.94rem; color: var(--ink-secondary); }
 
+/* ==========================================================================
+   BARRA DE LOGOS TIER 1 NO RODAPÉ (2 COLUNAS NO MOBILE, 5 NO DESKTOP)
+   ========================================================================== */
+.tech-brands-strip {
+  position: relative;
+  z-index: 10;
+  background-color: var(--navy-mid);
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+  padding: 40px 0;
+  text-align: center;
+  color: var(--white);
+  width: 100%;
+}
+
+.brands-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.brand-logo-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 66px;
+  transition: border-color var(--transition), background-color var(--transition), transform var(--transition);
+}
+
+/* Centraliza o 5º item (Deye) ocupando as 2 colunas no mobile */
+.brand-logo-box:last-child {
+  grid-column: span 2;
+  max-width: 210px;
+  width: 100%;
+  justify-self: center;
+}
+
+.brand-logo-box:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(248, 210, 16, 0.5);
+  transform: translateY(-2px);
+}
+
+.brand-logo-img {
+  max-height: 36px;
+  width: auto;
+  object-fit: contain;
+  opacity: 1;
+}
+
+.brand-logo-img[alt="Huawei"] {
+  filter: brightness(0) invert(1);
+}
+
 /* FOOTER */
 .footer { background-color: var(--navy); color: var(--white); padding: 44px 0 28px; position: relative; z-index: 5; }
 .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid var(--border-dark); }
@@ -912,12 +948,48 @@ button, input, select {
 .footer-bottom { padding-top: 20px; font-size: 0.82rem; color: #94a3b8; }
 
 /* RESPONSIVIDADE */
+@media (max-width: 640px) {
+  .hero-metrics-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .metric-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
 @media (min-width: 860px) {
   .topbar-nav { display: flex; }
   .mobile-menu-btn { display: none; }
   .featured-project-card { grid-template-columns: 1.1fr 0.9fr; }
   .conversion-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr 1fr; }
+
+  .brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .brand-logo-box {
+    min-width: 180px;
+    height: 80px;
+    padding: 16px 28px;
+  }
+
+  .brand-logo-box:last-child {
+    grid-column: auto;
+    max-width: none;
+    width: auto;
+  }
+
+  .brand-logo-img {
+    max-height: 48px;
+  }
 }
 
 @media (min-width: 960px) {
