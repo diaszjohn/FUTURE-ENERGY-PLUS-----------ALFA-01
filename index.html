@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self' http://localhost:3000;"
+  />
+
+  <title>Future Energy Plus | Engenharia e Energia Solar Fotovoltaica</title>
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+  <meta
+    name="description"
+    content="Projetos solares fotovoltaicos corporativos e residenciais de alto padrão com engenharia própria em Parnaíba e região."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- HEADER CORPORATIVO -->
+  <header class="topbar" role="banner">
+    <div class="container topbar-inner">
+      <a href="#hero" class="brand-logo" aria-label="Future Energy Plus — Página inicial">
+        <img src="img/future1.png" alt="Future Energy Plus" class="logo-img" />
+      </a>
+
+      <nav class="topbar-nav" aria-label="Navegação principal">
+        <a href="#projetos" class="nav-link">Cases de Grande Porte</a>
+        <a href="#tecnologia" class="nav-link">Inversores Tier 1</a>
+        <a href="#servicos" class="nav-link">Soluções</a>
+        <a href="#simulador" class="nav-link">Simulador</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <a href="#simulador" class="btn-primary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          <span>Falar com Engenheiro</span>
+        </a>
+
+        <button type="button" id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <nav id="mobile-nav" class="mobile-nav hidden" aria-label="Menu mobile">
+      <a href="#projetos" class="mobile-nav-link">Cases de Grande Porte</a>
+      <a href="#tecnologia" class="mobile-nav-link">Inversores Tier 1</a>
+      <a href="#servicos" class="mobile-nav-link">Soluções</a>
+      <a href="#simulador" class="mobile-nav-link">Simulador</a>
+      <a href="#faq" class="mobile-nav-link">FAQ</a>
+      <a href="#simulador" class="btn-primary btn-full">Falar com Comercial</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO COM VÍDEOS DE FUNDO EM LOOP E FADE -->
+    <section id="hero" class="hero-video-section">
+      <div class="hero-video-bg">
+        <video class="bg-video active" autoplay muted loop playsinline>
+          <source src="img/gravacao1.mp4" type="video/mp4" />
+        </video>
+        <video class="bg-video" autoplay muted loop playsinline>
+          <source src="img/gravacao2.mp4" type="video/mp4" />
+        </video>
+        <video class="bg-video" autoplay muted loop playsinline>
+          <source src="img/gravacao3.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-video-overlay"></div>
+      </div>
+
+      <div class="container hero-grid-layout">
+        <!-- Coluna Esquerda: Textos e Ações -->
+        <div class="hero-content-left">
+          <h1 class="hero-title">
+            Soluções fotovoltaicas corporativas e residenciais com <span>máxima eficiência.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Projetos estruturados sob rigorosos padrões de engenharia elétrica, homologação ágil e tecnologia de ponta para garantir rentabilidade e segurança energética em Parnaíba e região.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#simulador" class="btn-primary btn-lg">
+              <span>Falar com o Comercial</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#projetos" class="btn-secondary btn-lg">Ver Obras Executadas</a>
+          </div>
+
+          <div class="hero-metrics-strip">
+            <div class="metric-item">
+              <strong>Até 80%</strong>
+              <span>Redução em custos</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <strong>Equipamentos Tier 1</strong>
+              <span>Huawei, Solis, Sungrow, SAJ, Deye</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <strong>25 Anos</strong>
+              <span>Garantia de performance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Logo Original + Pop-up de Autoridade -->
+        <div class="hero-right-display">
+          <div class="hero-brand-card">
+            <img src="img/future.png" alt="Future Energy Plus" class="hero-showcase-logo" />
+            <div class="hero-authority-badge">
+              <span class="pulse-dot"></span>
+              <strong>+500 usinas instaladas</strong>
+              <span>em Parnaíba e região</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: MARCAS / LOGOS TIER 1 -->
+    <section id="tecnologia" class="tech-brands-strip">
+      <div class="container">
+        <span class="brands-label">Trabalhamos exclusivamente com marcas globais homologadas Tier 1:</span>
+        <div class="brands-grid">
+          <div class="brand-logo-box">
+            <img src="img/huawei.png" alt="Huawei" class="brand-logo-img" />
+          </div>
+          <div class="brand-logo-box">
+            <img src="img/solis.png" alt="Solis" class="brand-logo-img" />
+          </div>
+          <div class="brand-logo-box">
+            <img src="img/sungrow.png" alt="Sungrow" class="brand-logo-img" />
+          </div>
+          <div class="brand-logo-box">
+            <img src="img/saj.png" alt="SAJ" class="brand-logo-img" />
+          </div>
+          <div class="brand-logo-box">
+            <img src="img/deye.png" alt="Deye" class="brand-logo-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: CASES DE GRANDE PORTE E LOCAIS -->
+    <section id="projetos" class="section section-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Engenharia Aplicada</span>
+          <h2>Referência em grandes usinas e <span>projetos de destaque</span></h2>
+          <p>Conheça realizações técnicas recentes entregues com alto rigor de engenharia na região.</p>
+        </div>
+
+        <!-- DESTAQUE PRINCIPAL: PARÓQUIA SANTA ANA -->
+        <article class="featured-project-card">
+          <div class="featured-img-wrap">
+            <img src="img/paroquia.jpg" alt="Paróquia Santa Ana - Sistema com Inversores e Baterias" class="service-photo" />
+            <span class="project-tag-absolute">Destaque • Paróquia Santa Ana</span>
+          </div>
+          <div class="featured-info">
+            <div class="eyebrow-pill">
+              <span class="eyebrow-dot"></span>
+              <span>Híbrido com Baterias de Alta Capacidade</span>
+            </div>
+            <h3>Paróquia Santa Ana</h3>
+            <p class="featured-desc">
+              Usina solar de grande porte equipada com sistema avançado de inversores e 2 baterias de alta performance para autonomia e segurança energética contínua.
+            </p>
+            <div class="featured-specs-grid">
+              <div class="spec-box">
+                <span>Potência Instalada</span>
+                <strong>31,50 kWp</strong>
+              </div>
+              <div class="spec-box">
+                <span>Geração Média</span>
+                <strong>4.050 kWh/mês</strong>
+              </div>
+              <div class="spec-box">
+                <span>Tecnologia</span>
+                <strong class="text-green">Inversores + 2 Baterias</strong>
+              </div>
+              <div class="spec-box">
+                <span>Confiabilidade</span>
+                <strong>Autonomia Total</strong>
+              </div>
+            </div>
+            <a href="#simulador" class="btn-primary" data-servico="Comercial">Solicitar Projeto Semelhante →</a>
+          </div>
+        </article>
+
+        <!-- GRID SECUNDÁRIO DE CASES -->
+        <div class="projects-grid-multi">
+          <!-- Case Barreirinhas -->
+          <article class="project-card">
+            <div class="project-img-wrap">
+              <img src="img/barreirinhas.jpg" alt="Centro, Barreirinhas" class="service-photo" />
+              <span class="project-badge">Centro • Barreirinhas</span>
+            </div>
+            <div class="project-content">
+              <h3>Centro, Barreirinhas</h3>
+              <div class="project-specs">
+                <div><span>Potência:</span> <strong>15,5 kWp</strong></div>
+                <div><span>Geração:</span> <strong>2.000 kWh/mês</strong></div>
+              </div>
+              <div class="project-financial">
+                <div>
+                  <span>Economia Mensal</span>
+                  <strong class="text-green">R$ 2.710,58</strong>
+                </div>
+                <div>
+                  <span>Retorno (Payback)</span>
+                  <strong>1,21 anos</strong>
+                </div>
+              </div>
+              <a href="#simulador" class="btn-secondary btn-full btn-sm" data-servico="Comercial">Quero um projeto assim</a>
+            </div>
+          </article>
+
+          <!-- Case São José -->
+          <article class="project-card">
+            <div class="project-img-wrap">
+              <img src="img/janilson.jpg" alt="Projeto Comercial São José" class="service-photo" />
+              <span class="project-badge">Comercial • Parnaíba</span>
+            </div>
+            <div class="project-content">
+              <h3>São José, Parnaíba - PI</h3>
+              <div class="project-specs">
+                <div><span>Potência:</span> <strong>15,60 kWp</strong></div>
+                <div><span>Geração:</span> <strong>2.000 kWh/mês</strong></div>
+              </div>
+              <div class="project-financial">
+                <div>
+                  <span>Economia Mensal</span>
+                  <strong class="text-green">R$ 2.755,20</strong>
+                </div>
+                <div>
+                  <span>Retorno (Payback)</span>
+                  <strong>1,08 anos</strong>
+                </div>
+              </div>
+              <a href="#simulador" class="btn-secondary btn-full btn-sm" data-servico="Comercial">Quero um projeto assim</a>
+            </div>
+          </article>
+
+          <!-- Case Bairro Ceará -->
+          <article class="project-card">
+            <div class="project-img-wrap">
+              <img src="img/chagas.jpg" alt="Projeto Residencial Ceará" class="service-photo" />
+              <span class="project-badge">Residencial • Parnaíba</span>
+            </div>
+            <div class="project-content">
+              <h3>Bairro Ceará, Parnaíba - PI</h3>
+              <div class="project-specs">
+                <div><span>Potência:</span> <strong>8,19 kWp</strong></div>
+                <div><span>Geração:</span> <strong>1.000 kWh/mês</strong></div>
+              </div>
+              <div class="project-financial">
+                <div>
+                  <span>Economia Mensal</span>
+                  <strong class="text-green">R$ 1.374,85</strong>
+                </div>
+                <div>
+                  <span>Retorno (Payback)</span>
+                  <strong>1,10 anos</strong>
+                </div>
+              </div>
+              <a href="#simulador" class="btn-secondary btn-full btn-sm" data-servico="Residencial">Quero um projeto assim</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: SOLUÇÕES -->
+    <section id="servicos" class="section section-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Portfólio de Atuação</span>
+          <h2>Soluções completas para cada <span>demanda estrutural</span></h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card service-bg-1">
+            <img src="img/casa.jpg" alt="Residencial" class="service-photo" />
+            <div class="service-overlay"></div>
+            <div class="service-body">
+              <span class="service-pill">Residencial</span>
+              <h3>Residências e Condomínios</h3>
+              <p>Autonomia energética com acabamento estético refinado e alta confiabilidade.</p>
+              <a href="#simulador" class="service-link" data-servico="Residencial">Saiba mais →</a>
+            </div>
+          </article>
+
+          <article class="service-card service-bg-2">
+            <img src="img/comercio.jpg" alt="Comercial" class="service-photo" />
+            <div class="service-overlay"></div>
+            <div class="service-body">
+              <span class="service-pill">Comercial &amp; Industrial</span>
+              <h3>Empresas e Negócios</h3>
+              <p>Redução drástica no custo fixo operacional, elevando a margem de lucro líquida.</p>
+              <a href="#simulador" class="service-link" data-servico="Comercial">Saiba mais →</a>
+            </div>
+          </article>
+
+          <article class="service-card service-bg-3">
+            <img src="img/rural.jpg" alt="Rural" class="service-photo" />
+            <div class="service-overlay"></div>
+            <div class="service-body">
+              <span class="service-pill">Rural &amp; Agronegócio</span>
+              <h3>Bombas e Irrigação</h3>
+              <p>Potência contínua para irrigação e operações rurais de grande porte no campo.</p>
+              <a href="#simulador" class="service-link" data-servico="Rural">Saiba mais →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULADOR + CONTATO COMERCIAL DIRETO -->
+    <section id="simulador" class="section section-white">
+      <div class="container conversion-grid">
+        <div class="simulator-card">
+          <span class="section-eyebrow eyebrow-yellow">Dimensionamento Estimado</span>
+          <h2>Projete o retorno do seu investimento</h2>
+          <p class="simulator-sub">Ajuste o valor mensal da sua fatura para calcular a estimativa de economia:</p>
+
+          <div class="slider-header">
+            <span>Fatura atual:</span>
+            <strong id="calc-fatura-display">R$ 850,00</strong>
+          </div>
+
+          <input
+            type="range"
+            id="calc-fatura-range"
+            class="fatura-slider"
+            min="250"
+            max="10000"
+            step="50"
+            value="850"
+          />
+
+          <div class="slider-scale">
+            <span>R$ 250</span>
+            <span>R$ 5.000</span>
+            <span>R$ 10.000+</span>
+          </div>
+
+          <div class="simulator-results">
+            <div class="sim-result-box">
+              <span>Economia Mensal Est.</span>
+              <strong id="calc-economia-mensal">R$ 680,00</strong>
+            </div>
+            <div class="sim-result-box highlight-box">
+              <span>Economia em 1 Ano</span>
+              <strong id="calc-economia-anual">R$ 8.160,00</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="form-header">
+            <h3>Fale Diretamente com o Comercial</h3>
+            <p>Atendimento técnico especializado via WhatsApp oficial.</p>
+          </div>
+
+          <form id="lead-form" class="lead-form" novalidate>
+            <div class="form-group">
+              <label for="lead-nome">Nome Completo / Empresa *</label>
+              <input type="text" id="lead-nome" name="nome" maxlength="80" placeholder="Ex: João Silva" required />
+            </div>
+
+            <div class="form-group">
+              <label for="lead-whatsapp">WhatsApp com DDD *</label>
+              <input type="tel" id="lead-whatsapp" name="whatsapp" maxlength="15" placeholder="(86) 99999-9999" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="lead-fatura">Fatura de luz média</label>
+                <input type="text" id="lead-fatura" name="fatura" maxlength="20" value="R$ 850,00" />
+              </div>
+
+              <div class="form-group">
+                <label for="lead-servico">Perfil de Projeto *</label>
+                <select id="lead-servico" name="servico" required>
+                  <option value="Residencial">Residencial</option>
+                  <option value="Comercial">Comercial / Empresarial</option>
+                  <option value="Rural">Rural / Agro</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" id="lead-submit-btn" class="btn-primary btn-full btn-lg">
+              Falar com o Comercial no WhatsApp →
+            </button>
+
+            <p id="form-feedback" class="form-feedback hidden" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-light">
+      <div class="container faq-container">
+        <div class="section-header">
+          <span class="section-eyebrow">Esclarecimentos Técnicos</span>
+          <h2>Dúvidas <span>frequentes</span></h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span>Quais inversores e módulos são utilizados nos projetos?</span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </summary>
+            <p>Trabalhamos estritamente com marcas Tier 1 de reconhecimento global, como Huawei, Solis, Sungrow, SAJ e Deye, garantindo máxima confiabilidade e eficiência.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Como funciona a homologação com a concessionária local?</span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </summary>
+            <p>Nossa engenharia cuida de todo o processo de ponta a ponta: elaboração de projeto elétrico, ART, protocolos junto à distribuidora e vistoria final para substituição do medidor.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-brand-title">FUTURE ENERGY PLUS</span>
+        <p>Engenharia e Soluções em Energia Solar Fotovoltaica.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#projetos" class="footer-link">Cases</a>
+        <a href="#tecnologia" class="footer-link">Inversores</a>
+        <a href="#servicos" class="footer-link">Soluções</a>
+        <a href="#simulador" class="footer-link">Contato</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Future Energy Plus. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
